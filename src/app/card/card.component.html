@@ -1,0 +1,9 @@
+<mat-card class="card col-4 mt-4 mb-2">
+    <mat-card-title-group>
+        <mat-card-subtitle>Saldo</mat-card-subtitle>
+    </mat-card-title-group>
+    <mat-card-content class="fs-1 mb-5">
+        <strong>{{myConto.saldo | currency:'EUR' }}</strong>
+    </mat-card-content>
+    <button class="btn btn-warning w-100" (click)="addTransaction()">Aggiungi transazione</button>
+</mat-card>

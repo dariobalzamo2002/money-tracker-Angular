@@ -1,0 +1,19 @@
+<form class="form-group" [formGroup]="profileForm">
+    <label for="causale">Causale*</label>
+    <input type="text" formControlName="causale" class="form-control">
+
+    <label for="importo">Importo*</label>
+    <input type="number" formControlName="importo" class="form-control">
+
+    <div class="form-check">
+        <label class="form-check-label" for="isEntry">Entrata</label>
+        <input class="form-check-input" type="radio" formControlName="isEntry" [value]="true">
+    </div>
+    <div class="form-check">
+        <label class="form-check-label" for="isEntry">Uscita</label>
+        <input class="form-check-input" type="radio" formControlName="isEntry" [value]="false">
+    </div>
+
+
+    <button type="submit" (click)="onSubmit()" class="btn btn-success">Conferma</button>
+</form>

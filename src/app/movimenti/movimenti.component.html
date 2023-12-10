@@ -1,0 +1,6 @@
+<mat-card *ngFor="let movimento of movimenti">
+    <mat-card-title [ngClass]="movimento.isEntry ? 'green-text' : 'red-text' ">
+        {{ movimento.isEntry ? movimento.importo : '-' + movimento.importo | currency:'EUR'}}
+    </mat-card-title>
+    <mat-card-subtitle>{{movimento.causale}}</mat-card-subtitle>
+</mat-card>
